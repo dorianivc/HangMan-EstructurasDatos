@@ -15,6 +15,7 @@ Diccionario::Diccionario()
 	else {
 		cout << "Archivo diccionario no existe o se encuentra dañado" << endl;
 	}
+	archivoFisico.close();
 }
 
 string Diccionario::toString()
@@ -29,10 +30,9 @@ string Diccionario::toString()
 
 string* Diccionario::palabraAleatoria()
 {
-vector<string*>::iterator z;
+sort(palabras.begin(), palabras.end());
 random_shuffle(palabras.begin(), palabras.end());
-z = palabras.begin();
-return *z;
+return *palabras.begin();
 }
 
 Diccionario::~Diccionario()

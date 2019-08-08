@@ -1,11 +1,13 @@
 #include "Dibujo.h"
 #include "Diccionario.h"
+#include "HangMan.h"
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-	Dibujo* hangMan = new Dibujo();
+	cout << endl << endl << endl;
+	/*Dibujo* hangMan = new Dibujo();
 	cout << hangMan->toString() << endl;
 	string ped = "Hola Mundo";
 
@@ -25,7 +27,10 @@ int main() {
 	cout << "Obteniendo palabra aleatoria" << endl;
 	cout << *dic->palabraAleatoria() << endl;
 	delete dic;
-	delete hangMan;
+	delete hangMan;*/
+	HangMan* juego = new HangMan();
+	juego->jugar();
+	delete juego;
 	cin.get();
 	return 0;
 }

@@ -17,6 +17,11 @@ Dibujo::Dibujo()
 
 }
 
+vector<string*> Dibujo::getDibujo()
+{
+	return dibujo;
+}
+
 string Dibujo::toString()
 {
 	stringstream p;

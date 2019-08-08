@@ -11,6 +11,7 @@ private:
 	vector<string*> dibujo;
 public:
 	Dibujo();
+	vector<string*> getDibujo();
 	string toString();
 	~Dibujo();
 };
