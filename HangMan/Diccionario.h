@@ -1,5 +1,9 @@
+// Diccionario.h
+// Autor: Dorian Vallecillo Calderon
+// Descripción: se encarga de leer las palabras desde el archivo de texto y almacenarlas.
 #ifndef DICCIONARIO_H
 #define DICCIONARIO_H
+#include <random>
 #include <string>
 #include <vector>
 #include <sstream>
@@ -13,7 +17,7 @@ private:
 public:
 	Diccionario();
 	string toString();
-	string* palabraAleatoria();
+	string palabraAleatoria();
 	~Diccionario();
 };
 #endif

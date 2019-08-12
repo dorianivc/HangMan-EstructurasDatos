@@ -1,5 +1,8 @@
 #include "Diccionario.h"
 #include <iostream>
+// Diccionario.h
+// Autor: Dorian Vallecillo Calderon
+// Descripción: se encarga de leer las palabras desde el archivo de texto y almacenarlas.
 
 Diccionario::Diccionario()
 {
@@ -28,11 +31,11 @@ string Diccionario::toString()
 	return p.str();
 }
 
-string* Diccionario::palabraAleatoria()
+string Diccionario::palabraAleatoria()
 {
 sort(palabras.begin(), palabras.end());
 random_shuffle(palabras.begin(), palabras.end());
-return *palabras.begin();
+return **palabras.begin();
 }
 
 Diccionario::~Diccionario()

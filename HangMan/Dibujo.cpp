@@ -1,3 +1,6 @@
+// Dibujo.cpp
+// Autor: Dorian Vallecillo Calderon
+// Descripción: contiene el dibujo del juego Ahorcado, se encarga de generarlo e imprimirlo;
 #include "Dibujo.h"
 
 Dibujo::Dibujo()

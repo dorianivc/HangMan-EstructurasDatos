@@ -1,3 +1,7 @@
+// Main.cpp
+// Autor: Dorian Vallecillo Calderon	
+// Descripción: funcion principal del programa
+#include "Utiles.h"
 #include "Dibujo.h"
 #include "Diccionario.h"
 #include "HangMan.h"
@@ -6,31 +10,29 @@
 using namespace std;
 
 int main() {
-	cout << endl << endl << endl;
-	/*Dibujo* hangMan = new Dibujo();
-	cout << hangMan->toString() << endl;
-	string ped = "Hola Mundo";
-
-	if (ped.find('a') != ped.npos) {//PROBANDO METODO NPOS
-		cout << " a, se encuentra en la cadena" << endl;
-	}
-	string::iterator palabra;
-	for (palabra = ped.begin(); palabra != ped.end(); ++palabra) {
-		cout << *palabra << endl;
-	}
-	palabra--;
-	ped.replace(palabra--, palabra, "x");
-	cout << ped << endl;
-	Diccionario* dic = new Diccionario();
-	cout << dic->toString() << endl;
-
-	cout << "Obteniendo palabra aleatoria" << endl;
-	cout << *dic->palabraAleatoria() << endl;
-	delete dic;
-	delete hangMan;*/
-	HangMan* juego = new HangMan();
-	juego->jugar();
-	delete juego;
+	bool finaliza = false;
+	do {
+		cout << endl << endl << endl;
+		cout << "Bienvenidos a Ahorcado" << endl;
+		cout << "Ingrese 1 para jugar" << endl;
+		cout << "Ingrese 2 para salir" << endl;
+		string entrada;
+		getline(cin, entrada);
+		if (atoi(entrada.c_str()) == 1) {
+			Utiles::limpiar_pantalla();
+			HangMan* juego = new HangMan();
+			juego->jugar();
+			delete juego;
+		}
+		else if (atoi(entrada.c_str()) == 2) {
+			finaliza = true;
+			return 0;
+		}
+		else {
+			Utiles::limpiar_pantalla();
+		}
+	} while (!finaliza);
+	
 	cin.get();
 	return 0;
 }

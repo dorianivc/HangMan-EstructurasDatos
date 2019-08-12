@@ -1,3 +1,6 @@
+// Dibujo.h
+// Autor: Dorian Vallecillo Calderon
+// Descripción: contiene el dibujo del juego Ahorcado, se encarga de generarlo e imprimirlo;
 #ifndef DIBUJO_H
 #define DIBUJO_H
 #include <string>
